@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elite Barber and Beauty Salon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Elite Barber & Beauty Salon</h1>
+    <p>Your Style, Our Passion</p>
+    <div class="nav-buttons">
+      <a href="#services" class="btn">Our Services</a>
+      <a href="#contact" class="btn">Book Appointment</a>
+      <a href="#about" class="btn">About</a>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="info" id="about">
+    <h2>About</h2>
+    <ul>
+      <li><strong>Category:</strong> Barber Shop</li>
+      <li><strong>Rating:</strong> 4.6 stars (116+ reviews)</li>
+      <li><strong>Status:</strong> Open ⋅ Closes 7 pm</li>
+      <li><strong>Location:</strong> 500 N Bell Ave #109, Denton, TX 76209</li>
+      <li><strong>Phone:</strong> +1 940-612-9127</li>
+      <li><strong>Directions:</strong> <a href="https://www.google.com/maps?q=500+N+Bell+Ave+%23109,+Denton,+TX+76209" target="_blank">Google Maps</a></li>
+      <li><strong>Customer Comment:</strong> "Affordable compared to other barbershops with better services."</li>
+    </ul>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service">
+        <h3>Haircuts</h3>
+        <p>Classic, modern, and custom styles for all ages.</p>
+      </div>
+      <div class="service">
+        <h3>Shaves</h3>
+        <p>Hot towel shaves and beard grooming.</p>
+      </div>
+      <div class="service">
+        <h3>Hair Coloring</h3>
+        <p>Professional coloring and highlights.</p>
+      </div>
+      <div class="service">
+        <h3>Facials</h3>
+        <p>Skin treatments to rejuvenate your face.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Book an Appointment</h2>
+    <form class="contact-form" id="contact-form">
+      <label for="name">Name <span class="required">*</span></label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email <span class="required">*</span></label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number <span class="required">*</span></label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="date">Preferred Date <span class="required">*</span></label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="service">Service <span class="required">*</span></label>
+      <select id="service" name="service" required>
+        <option value="" disabled selected>Select a Service</option>
+        <option value="haircut">Haircut</option>
+        <option value="shave">Shave</option>
+        <option value="facial">Facial</option>
+        <option value="styling">Styling</option>
+      </select>
+
+      <label for="message">Message </label>
+      <textarea id="message" name="message" placeholder="Tell us about your style preferences and any questions you have"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Elite Barber and Beauty Salon
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" id="page-up">&#8679;</a>
+
+  <script>
+    // JavaScript for form submission with alert box
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent default form submission
+
+        // Display alert on form submission
+        alert("✅ Message sent successfully!");
+
+        // Optionally reset the form after submission
+        form.reset();
+    });
+
+    // JavaScript for Back to Top button functionality
+    const pageUp = document.getElementById("page-up");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        pageUp.style.display = "block";
+      } else {
+        pageUp.style.display = "none";
+      }
+    });
+
+    pageUp.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+</body>
+</html>
